@@ -20,8 +20,6 @@ puts stderr "\tInstalled by: Andy Turner, EPCC"
 
 module use /work/y07/shared/archer2-modules/modulefiles-cse
 
-module load epcc/utils
-
 setenv SBATCH_EXPORT none
 setenv SLURM_EXPORT_ENV all
 setenv PRGENV_DIR "/etc/cray-pe.d"

@@ -21,7 +21,7 @@ puts stderr "\tInstalled by: Andy Turner, EPCC"
 module use /work/y07/shared/archer2-modules/modulefiles-cse-apps
 module use /work/y07/shared/archer2-modules/modulefiles-cse-libs
 module use /work/y07/shared/archer2-modules/modulefiles-cse-utils
-module use /work/y07/shared/archer2-modules/modulefiles-cse-pyenvs
+module use /work/y07/shared/archer2-modules/modulefiles-cse-pyvenvs
 
 setenv SBATCH_EXPORT none
 setenv SLURM_EXPORT_ENV all

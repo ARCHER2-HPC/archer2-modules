@@ -1,0 +1,29 @@
+#%Module
+#
+ 
+# Clashes
+conflict openmpi
+
+proc ModulesHelp { } {
+  puts stderr "OpenMPI 4.0.4"
+  puts stderr "=============\n"
+  puts stderr "Open MPI Project is an open source Message Passing Interface (MPI) implementation."
+  puts stderr "See https://www.open-mpi.org/doc/current/ .\n"
+  puts stderr "This version of OpenMPI was compiled using GCC 10.1.0.\n"
+  puts stderr "Installed by: M. Bareford, EPCC"
+  puts stderr "Date: 22 October 2020\n"
+}
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys        [uname sysname]
+
+set OPENMPI_ROOT /work/y07/shared/libs/openmpi/4.0.4-gcc10
+
+prepend-path PATH $OPENMPI_ROOT/bin
+prepend-path CPATH $OPENMPI_ROOT/include
+prepend-path MANPATH $OPENMPI_ROOT/share/man
+prepend-path LIBRARY_PATH $OPENMPI_ROOT/lib
+prepend-path LD_LIBRARY_PATH $OPENMPI_ROOT/lib
+prepend-path LD_RUN_PATH $OPENMPI_ROOT/lib
+prepend-path PKG_CONFIG_PATH $OPENMPI_ROOT/lib/pkgconfig

@@ -32,7 +32,7 @@ conflict vasp
  set sys        [uname sysname]
 
  set VASP6_LEVEL vasp.6.1.1-gcc9
- set VASP6_CURPATH /work/y07/shared/vasp6/$VASP5_LEVEL
+ set VASP6_CURPATH /work/y07/shared/vasp6/$VASP6_LEVEL
 
  prepend-path  PATH              $VASP6_CURPATH/bin
  setenv VASP6 $VASP6_CURPATH

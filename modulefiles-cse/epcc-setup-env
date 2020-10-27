@@ -18,7 +18,7 @@ puts stderr "\tInstalled by: Andy Turner, EPCC"
 
 }
 
-module use /work/y07/shared/archer2-modules/modulefiles-cse
+module use /work/y07/shared/archer2-modules/modulefiles-cse-apps
 
 setenv SBATCH_EXPORT none
 setenv SLURM_EXPORT_ENV all

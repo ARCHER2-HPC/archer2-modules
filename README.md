@@ -5,6 +5,7 @@ on the [ARCHER2 UK National Supercomputing Service](https://www.archer2.ac.uk).
 
 The modulefiles are organised into a number of subdirectories:
 
+  - `modulefiles-cse` Modulefiles for setting up ARCHER2 environment
   - `modulefiles-cse-apps` Modulefiles for research software
     applications (e.g. VASP, OpenFOAM)
   - `modulefiles-cse-libs` Modulefiles for software libraries

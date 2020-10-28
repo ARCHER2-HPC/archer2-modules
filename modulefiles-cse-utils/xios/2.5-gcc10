@@ -7,7 +7,7 @@ conflict xios
 proc ModulesHelp { } {
   puts stderr "XIOS 2.5"
   puts stderr "========\n"
-  puts stderr "XML is and XML IO SERVER, dedicated to IO management of climate code.\n"
+  puts stderr "XML is an XML IO SERVER, dedicated to IO management of climate code.\n"
   puts stderr "This version of XIOS was compiled using GCC v10.1.0.\n"
   puts stderr "Installed by: M. Bareford, EPCC"
   puts stderr "Date: 26 October 2020\n"

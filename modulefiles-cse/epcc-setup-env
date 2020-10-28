@@ -23,7 +23,7 @@ module use /work/y07/shared/archer2-modules/modulefiles-cse-libs
 module use /work/y07/shared/archer2-modules/modulefiles-cse-utils
 module use /work/y07/shared/archer2-modules/modulefiles-cse-pyvenvs
 
-setenv SBATCH_EXPORT none
+setenv SBATCH_EXPORT MODULEPATH
 setenv SLURM_EXPORT_ENV all
 setenv PRGENV_DIR "/etc/cray-pe.d"
 

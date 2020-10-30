@@ -21,5 +21,4 @@ set sys        [uname sysname]
 
 set XTHI_ROOT /work/y07/shared/utils/xthi
 
-module restore /etc/cray-pe.d/PrgEnv-gnu
 prepend-path PATH $XTHI_ROOT/bin

@@ -17,14 +17,17 @@ puts stderr "\tInstalled by: Andy Turner, EPCC"
 }
 
 set noexport 0
-if { [getenv SBATCH_EXPORT] == "NONE"
-     || [getenv SBATCH_EXPORT] == "MODULEPATH,SBATCH_EXPORT"
-     || [getenv SBATCH_EXPORT] == "_UNDEFINED_" 
-   } then {
-   set noexport 1
-}
 
-if { ([getenv SLURM_JOB_ID] != "_UNDEFINED_") && $noexport } {
-   module restore /etc/cray-pe.d/PrgEnv-cray
+if { [module-info mode load] } {
+   if { [getenv SBATCH_EXPORT] == "NONE"
+        || [getenv SBATCH_EXPORT] == "MODULEPATH,SBATCH_EXPORT"
+        || [getenv SBATCH_EXPORT] == "_UNDEFINED_" 
+      } then {
+      set noexport 1
+   }
+
+   if { ([getenv SLURM_JOB_ID] != "_UNDEFINED_") && $noexport } {
+      module restore /etc/cray-pe.d/PrgEnv-cray
+   }
 }
 

@@ -18,11 +18,16 @@ puts stderr "\tInstalled by: Andy Turner, EPCC"
 
 }
 
+# CSE module locations
 module use /work/y07/shared/archer2-modules/modulefiles-cse-apps
 module use /work/y07/shared/archer2-modules/modulefiles-cse-libs
 module use /work/y07/shared/archer2-modules/modulefiles-cse-utils
 module use /work/y07/shared/archer2-modules/modulefiles-cse-pyvenvs
 
+# Other binary locations
+prepend-path PATH /work/y07/shared/utils/bin
+
+# Default environment variables
 setenv OMP_NUM_THREADS 1
 setenv SBATCH_EXPORT MODULEPATH,SBATCH_EXPORT
 setenv SLURM_EXPORT_ENV all

@@ -7,8 +7,8 @@ conflict onetep
 proc ModulesHelp { } {
 puts stderr "ONETEP 6.0"
 puts stderr "==========\n"
-puts stderr "This module sets up your environment to access CASTEP 19.11"
-puts stderr "Once loaded you can access the CASTEP executable using the"
+puts stderr "This module sets up your environment to access ONETEP 6.0"
+puts stderr "Once loaded you can access the ONETEP executable using the"
 puts stderr "name \'onetep.archer2\'.\n"
 puts stderr "For access to ONETEP, please request access through"
 puts stderr "the SAFE. see:"
@@ -21,7 +21,7 @@ set _module_name  [module-info name]
 set is_module_rm  [module-info mode remove]
 set sys        [uname sysname]
 
-set ONETEP_CURPATH /work/y07/shared/castep
+set ONETEP_CURPATH /work/y07/shared/onetep
 set ONETEP_VERSION 6.0
 
 prepend-path  PATH $ONETEP_CURPATH/$ONETEP_VERSION/bin

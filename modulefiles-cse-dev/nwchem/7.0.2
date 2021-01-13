@@ -2,14 +2,14 @@
 #
 
 proc ModulesHelp { } {
- puts stderr "NWChem 7.0.0"
+ puts stderr "NWChem 7.0.2"
  puts stderr "============\n"
  puts stderr "This module defines the system paths and"
  puts stderr "environment variables needed to use NWChem"
- puts stderr "7.0.0 Once the module is loaded the executable"
+ puts stderr "7.0.2 Once the module is loaded the executable"
  puts stderr "will be available as 'nwchem'\n"
  puts stderr "\tInstalled by: A. Turner, EPCC"
- puts stderr "\tDate: 16 October 2020\n"
+ puts stderr "\tDate: 13 January 2021\n"
 
 }
 
@@ -19,7 +19,7 @@ set _module_name  [module-info name]
 set is_module_rm  [module-info mode remove]
 set sys        [uname sysname]
 
-set NWCHEM_LEVEL nwchem-7.0.0
+set NWCHEM_LEVEL nwchem-7.0.2
 set NWCHEM_CURPATH /work/y07/shared/nwchem/$NWCHEM_LEVEL
 
 prepend-path  PATH              $NWCHEM_CURPATH/bin/LINUX64

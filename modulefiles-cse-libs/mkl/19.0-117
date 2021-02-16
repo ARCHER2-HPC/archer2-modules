@@ -20,5 +20,5 @@ prepend-path LIBRARY_PATH $mkl_root/lib/$arch
 prepend-path FPATH $mkl_root/include
 prepend-path CPATH $mkl_root/include
 prepend-path NLSPATH $mkl_root/lib/$arch
-setenv MKL_DEBUG_CPU_TYPE=5
+setenv MKL_DEBUG_CPU_TYPE 5
 

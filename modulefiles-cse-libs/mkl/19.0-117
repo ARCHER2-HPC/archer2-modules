@@ -4,13 +4,14 @@
 ##
 #
 conflict mkl
-conflict cray-libsci
 
 proc ModulesHelp { } {
    puts stderr "Sets up the paths for Intel Math Kernel Library 19.0-117"
 }
 
 set arch intel64
+
+module unload cray-libsci
 
 set mkl_root /work/y07/shared/libs/mkl/mkl-2019.0-117
 prepend-path MKLROOT $mkl_root

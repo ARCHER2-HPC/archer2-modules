@@ -31,7 +31,7 @@ conflict vasp
  set is_module_rm  [module-info mode remove]
  set sys        [uname sysname]
 
- set VASP5_LEVEL vasp.5.4.4.pl2-gcc9
+ set VASP5_LEVEL vasp.5.4.4.pl2-gcc10
  set VASP5_CURPATH /work/y07/shared/vasp5/$VASP5_LEVEL
 
  prepend-path  PATH              $VASP5_CURPATH/bin

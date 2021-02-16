@@ -1,2 +1,2 @@
 #%Module
-set ModulesVersion "5.4.4-gcc9"
+set ModulesVersion "5.4.4-gcc10"

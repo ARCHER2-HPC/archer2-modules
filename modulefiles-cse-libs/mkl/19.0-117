@@ -1,0 +1,24 @@
+#%Module######################################################################
+##
+##      Intel MKL
+##
+#
+conflict mkl
+conflict cray-libsci
+
+proc ModulesHelp { } {
+   puts stderr "Sets up the paths for Intel Math Kernel Library 19.0-117"
+}
+
+set arch intel64
+
+set mkl_root /work/y07/shared/libs/mkl/mkl-2019.0-117
+prepend-path MKLROOT $mkl_root
+prepend-path LD_LIBRARY_PATH $mkl_root/lib/$arch
+prepend-path LD_LIBRARY_PATH $mkl_root/lib/${arch}_lin
+prepend-path LIBRARY_PATH $mkl_root/lib/$arch
+prepend-path FPATH $mkl_root/include
+prepend-path CPATH $mkl_root/include
+prepend-path NLSPATH $mkl_root/lib/$arch
+setenv MKL_DEBUG_CPU_TYPE=5
+

@@ -13,7 +13,7 @@ puts stderr "\t* Adds to the the default MODULEPATH to make software modules ava
 puts stderr "\t* Sets SBATCH_EXPORT=none to avoid login shell modules being exported to batch jobs\n"
 puts stderr "\t* Sets PRGENV_DIR=/etc/cray-pe.d to allow users to use 'module restore $PRGENV_DIR/PrgEnv-`\n"
 
-puts stderr "\tInstalled: 15 October 2020"
+puts stderr "\tInstalled: 19 January 2021"
 puts stderr "\tInstalled by: Andy Turner, EPCC"
 
 }
@@ -33,6 +33,10 @@ setenv OMP_NUM_THREADS 1
 setenv SBATCH_EXPORT MODULEPATH,SBATCH_EXPORT
 setenv SLURM_EXPORT_ENV all
 setenv PRGENV_DIR "/etc/cray-pe.d"
+setenv EPCC_SINGULARITY_DIR /work/y07/shared/singularity-images
+
+# Default modules
+module load bolt
 
 if { [module-info mode remove] } {
     puts stderr "\nWarning: Unloading the epcc-setup-env module will stop many"

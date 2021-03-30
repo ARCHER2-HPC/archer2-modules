@@ -19,6 +19,11 @@ set _module_name  [module-info name]
 set is_module_rm  [module-info mode remove]
 set sys        [uname sysname]
 
+module unload cray-mpich
+module unload craype-network-ucx
+module load craype-network-ofi
+module load libfabric/1.11.0.0.233
+
 set MPICH_ROOT /work/y07/shared/libs/mpich/3.4.1-ofi-gcc10
 
 prepend-path PATH $MPICH_ROOT/bin

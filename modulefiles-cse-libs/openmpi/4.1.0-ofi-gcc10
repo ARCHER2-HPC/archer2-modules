@@ -21,6 +21,7 @@ set sys        [uname sysname]
 
 module unload cray-mpich
 module unload craype-network-ucx
+module unload cray-libsci
 module load craype-network-ofi
 module load libfabric/1.11.0.0.233
 

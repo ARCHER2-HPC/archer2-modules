@@ -5,25 +5,25 @@
 conflict code_saturne
 
 proc ModulesHelp { } {
-  puts stderr "Code_Saturne 6.0.5"
+  puts stderr "Code_Saturne 6.0.6"
   puts stderr "==================\n"
-  puts stderr "\tThis module supplies Code_Saturne 6.0.5.\n"
+  puts stderr "\tThis module supplies Code_Saturne 6.0.6.\n"
   puts stderr "\tFull documentation can be found using the 'man"
   puts stderr "\tcode_saturne' or 'code_saturne info' commands.\n"
   puts stderr "\tInstalled by: W. Lucas, EPCC"
-  puts stderr "\tDate: 19 October 2020\n"
+  puts stderr "\tDate: 7 May 2021\n"
 }
-
-module restore /etc/cray-pe.d/PrgEnv-gnu
-module load /work/y07/shared/archer2-modules/modulefiles-cse/epcc-setup-env
 
 set _module_name  [module-info name]
 set is_module_rm  [module-info mode remove]
 set sys        [uname sysname]
 
-set LEVEL 6.0.5
-set CURPATH /work/y07/shared/code_saturne/$LEVEL-gcc10 
+set LEVEL 6.0.6
+set CURPATH /work/y07/shared/code_saturne/$LEVEL-gcc10-cpe2103
 set SITE lib/python3.8/site-packages
+
+module restore $CURPATH/collection/6.0.6-gcc10-cpe2103
+prepend-path LD_LIBRARY_PATH [getenv CRAY_LD_LIBRARY_PATH]
 
 setenv           CODE_SATURNE_DIR $CURPATH
 setenv           CODE_SATURNE_INC $CURPATH/include

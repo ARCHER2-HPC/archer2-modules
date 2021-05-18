@@ -12,7 +12,7 @@ puts stderr "Once loaded you can access the ONETEP executable using the"
 puts stderr "name \'onetep.archer2\'.\n"
 puts stderr "For access to ONETEP, please request access through"
 puts stderr "the SAFE. see:"
-puts stderr "\t* https://epcced.github.io/safe-docs/safe-for-users/#how-to-request-access-to-a-package-group
+puts stderr "\t* https://epcced.github.io/safe-docs/safe-for-users/#how-to-request-access-to-a-package-group"
 puts stderr "\tInstalled by: A. Turner, EPCC"
 puts stderr "\tDate: 3 May 2021\n"
 }

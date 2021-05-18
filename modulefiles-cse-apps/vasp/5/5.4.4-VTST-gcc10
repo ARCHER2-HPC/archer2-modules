@@ -37,6 +37,6 @@ conflict vasp
  prepend-path  PATH              $VASP5_CURPATH/bin
  setenv VASP5 $VASP5_CURPATH
  setenv VASP5_VDW_KERNEL $VASP5_CURPATH/vdw_kernal/vdw_kernel.bindat
- setenv VASP_PSPOT_DIR $VASP5_CURPATH/potpaw
+ setenv VASP_PSPOT_DIR /work/y07/shared/vasp5/potpaw
 
 

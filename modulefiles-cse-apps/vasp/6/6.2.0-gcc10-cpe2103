@@ -27,7 +27,10 @@ conflict vasp
 
  }
 
-module restore /work/y07/shared/vasp6/vasp.6.2.0-gcc10-cpe2103/collection/vasp.6.2.0-gcc10-cpe2103
+# Need to protect the restore command because unloading the restore causes errors
+if { [module-info mode load] } {
+   module restore /work/y07/shared/vasp6/vasp.6.2.0-gcc10-cpe2103/collection/vasp.6.2.0-gcc10-cpe2103
+}
 prepend-path LD_LIBRARY_PATH [getenv CRAY_LD_LIBRARY_PATH]
 
 set _module_name  [module-info name]

@@ -5,11 +5,11 @@
 conflict vasp
 
  proc ModulesHelp { } {
-  puts stderr "VASP 5.4.4"
-  puts stderr "==========\n"
+  puts stderr "VASP 5.4.4 with VTST"
+  puts stderr "====================\n"
 
   puts stderr "This module sets up your environment to"
-  puts stderr "access VASP 5.4.4.\n"
+  puts stderr "access VASP 5.4.4 with the VASP Transition State Tools added.\n"
 
   puts stderr "Once this module has been loaded you can"
   puts stderr "access the VASP 5.4.4 executables as:\n"
@@ -21,7 +21,7 @@ conflict vasp
   puts stderr "gamma-point version of the code runs about 30-50%"
   puts stderr "faster than the complex code.\n"
 
-  puts stderr "\tCompiled: 10 May 2021"
+  puts stderr "\tCompiled: 17 May 2020"
   puts stderr "\tMaintained by: A. R. Turner, EPCC"
 
 
@@ -29,21 +29,20 @@ conflict vasp
 
 # Need to protect the restore command because unloading the restore causes errors
 if { [module-info mode load] } {
-   module restore /work/y07/shared/vasp5/vasp.5.4.4.pl2-gcc10-cpe2103/collection/vasp544-gcc10-cpe2103
+   module restore /work/y07/shared/vasp5/vasp.5.4.4.pl2-vtst-gcc10-cpe2103/collection/vasp544-gcc10-cpe2103
 }
 prepend-path LD_LIBRARY_PATH [getenv CRAY_LD_LIBRARY_PATH]
 
-set _module_name  [module-info name]
-set is_module_rm  [module-info mode remove]
-set sys        [uname sysname]
+ set _module_name  [module-info name]
+ set is_module_rm  [module-info mode remove]
+ set sys        [uname sysname]
 
-set VASP5_LEVEL vasp.5.4.4.pl2-gcc10-cpe2103
-set VASP5_CURPATH /work/y07/shared/vasp5/$VASP5_LEVEL
+ set VASP5_LEVEL vasp.5.4.4.pl2-vtst-gcc10-cpe2103
+ set VASP5_CURPATH /work/y07/shared/vasp5/$VASP5_LEVEL
 
-prepend-path  PATH              $VASP5_CURPATH/bin
-prepend-path LD_LIBRARY_PATH [getenv CRAY_LD_LIBRARY_PATH]
-setenv VASP5 $VASP5_CURPATH
-setenv VASP5_VDW_KERNEL $VASP5_CURPATH/vdw_kernal/vdw_kernel.bindat
-setenv VASP_PSPOT_DIR $VASP5_CURPATH/potpaw
+ prepend-path  PATH              $VASP5_CURPATH/bin
+ setenv VASP5 $VASP5_CURPATH
+ setenv VASP5_VDW_KERNEL $VASP5_CURPATH/vdw_kernal/vdw_kernel.bindat
+ setenv VASP_PSPOT_DIR /work/y07/shared/vasp5/potpaw
 
 

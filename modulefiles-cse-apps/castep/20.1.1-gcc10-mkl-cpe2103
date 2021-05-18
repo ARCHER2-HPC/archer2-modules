@@ -23,7 +23,10 @@ set _module_name  [module-info name]
 set is_module_rm  [module-info mode remove]
 set sys        [uname sysname]
 
-module restore /work/y07/shared/castep/20.11-gcc10-mkl-cpe2103/collection/castep2011-gcc10-mkl212
+# Need to protect the restore command because unloading the restore causes errors
+if { [module-info mode load] } {
+   module restore /work/y07/shared/castep/20.11-gcc10-mkl-cpe2103/collection/castep2011-gcc10-mkl212
+}
 prepend-path LD_LIBRARY_PATH [getenv CRAY_LD_LIBRARY_PATH]
 
 set CASTEP_CURPATH /work/y07/shared/castep

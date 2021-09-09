@@ -18,7 +18,7 @@ set _module_name  [module-info name]
 set is_module_rm  [module-info mode remove]
 set sys        [uname sysname]
 
-module restore /work/y07/shared/cp2k/cp2k-7.1/collection/cp2k-7.1-cpe2103
+module restore /work/y07/shared/cp2k/cp2k-7.1/collection-new/cp2k-7.1-cpe2103
 prepend-path LD_LIBRARY_PATH [getenv CRAY_LD_LIBRARY_PATH]
 
 set CP2K_CURPATH /work/y07/shared/cp2k/

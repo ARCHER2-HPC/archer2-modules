@@ -13,21 +13,16 @@ puts stderr "6.7. Once loaded you can access MPI-enabled Quantum Esspresso"
 puts stderr "executables using the usual commands."
 puts stderr "\tInstalled by: J. Sindt, EPCC"
 puts stderr "\tDate: 27 April 2021\n"
-puts stderr "============\n"
-puts stderr "To use, you will need to include the following in your Slurm"
-puts stderr "script:\n"
-puts stderr "\tmodule restore /etc/cray-pe.d/PrgEnv-gnu"
-puts stderr "\tmodule load cray-fftw cray-hdf5-parallel"
-puts stderr "\tmodule load quantum-espresso/6.7"
 }
 
 set _module_name  [module-info name]
 set is_module_rm  [module-info mode remove]
 set sys        [uname sysname]
 
-#module load cray-fftw
-#module load cray-hdf5-parallel
-module load cpe/21.03
+if { [module-info mode load] } {
+   module restore /work/y07/shared/archer2-modules/modulefiles-cse-apps/quantum-espresso/collections/qe-6.7-cpe2103 
+}
+
 prepend-path LD_LIBRARY_PATH [getenv CRAY_LD_LIBRARY_PATH]
 
 set QE_CURPATH /work/y07/shared/quantum-espresso
